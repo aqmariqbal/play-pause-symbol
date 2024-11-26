@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #303030;
+    display: grid;
+    place-items: center;
+}
+
+.playpause {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    clip-path: polygon(
+        0 0,
+        50% 25%,
+        50% 75%,
+        50% 75%,
+        50% 25%,
+        100% 50%,
+        100% 50%,
+        0 100%
+    );
+}
+
+.playpause.playing {
+    clip-path: polygon(
+        0 0,
+        40% 0,
+        40% 100%,
+        60% 100%,
+        60% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
